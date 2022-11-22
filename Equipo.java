@@ -18,20 +18,46 @@ public class Equipo {
     public boolean getjuego() {
         return juegan;
     }
-    public void setAñadirJugador(int añadirJugadores) {
+    public void setAnadirJugador(int añadirJugadores) {
         numeroPersonas += añadirJugadores;
     }
     public void setJueganoNO(boolean jueg) {
         juegan = jueg;
     }
+    public void setNombredelEquipo(String nombreDeMiEquipo){
+        nombreEquipo = nombreDeMiEquipo;
+    }
+    public void setsiJuegan(){
+        if(juegan == true){
+         juegan = false;
+        }
+        else{
+        juegan = true;
+        }
+    }
     public String getstats (){
-        String estado = "El nombre del equipo es " + nombreEquipo + " El equipo está formado por " + numeroPersonas + " jugadores" + " ¿Juegan siempre los mismos jugadores " + juegan;
+        String SiNo = null;
+        if(juegan == true){
+            SiNo = "Si";
+        }
+        else{
+            SiNo = "No";
+        }
+        String estado = "El nombre del equipo es " + nombreEquipo + " El equipo está formado por " + numeroPersonas + " jugadores" + " ¿Juegan siempre los mismos jugadores? " + SiNo;
         return estado;
     }
     public void imprimirstats(){
-        String estado = "El nombre del equipo es " + nombreEquipo + " El equipo está formado por " + numeroPersonas + " jugadores" + " ¿Juegan siempre los mismos jugadores? " + juegan;
+        String SiNo = null;
+        if(juegan == true){
+        SiNo = "Si";
+        }
+        else{
+        SiNo = "No";
+        }
+        String estado = "El nombre del equipo es " + nombreEquipo + " El equipo está formado por " + numeroPersonas + " jugadores" + " ¿Juegan siempre los mismos jugadores? " + SiNo;
         System.out.println(estado);
     }    
+    
         
         
         
