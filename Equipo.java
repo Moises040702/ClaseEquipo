@@ -4,10 +4,10 @@ public class Equipo {
     private int numeroPersonas;
     private boolean juegan;
     
-    public Equipo(String nombreDelEquipo, int numeroDePersonas, boolean jugar) {
+    public Equipo(String nombreDelEquipo, int numeroDePersonas) {
         nombreEquipo = nombreDelEquipo;
         numeroPersonas = numeroDePersonas;
-        juegan = jugar;
+        juegan = true;
     }
     public int getNumeroPersonas() {
         return numeroPersonas;
